@@ -1,2 +1,12 @@
-package com.sparta.hotel.dto;public class LoginRequestDto {
+package com.sparta.hotel.dto;
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+public class LoginRequestDto {
+
+  private String username;
+  private String password;
 }
