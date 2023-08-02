@@ -8,6 +8,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
+@NoArgsConstructor
 @Table(name = "users") // 생략 가능 - user
 public class User extends TimeStamped {
     @Id
@@ -44,7 +45,14 @@ public class User extends TimeStamped {
     @Enumerated(value = EnumType.STRING)
     private UserRoleEnum role;
 
+    public User(String nickname,String username, String password, String email,UserRoleEnum role ) {
+        this.nickname=nickname;
+        this.username=username;
+        this.password=password;
+        this.email=email;
+        this.role=role;
 
+    }
 
 
 }
